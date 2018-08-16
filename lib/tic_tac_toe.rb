@@ -72,9 +72,10 @@ def turn(board)
     puts "Please enter 1-9:" #get the user input
     user_input = gets.strip
     index = input_to_index(user_input) # input to index
+    value = current_player(board)
 
   if valid_move?(board, index)
-    move(board,index,value="X")
+    move(board,index,value)
     display_board(board)
   else
     puts "Oops, invalid move! Please try again."
